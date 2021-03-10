@@ -51,7 +51,7 @@ const run = async () => {
             data: newIp
         };
 
-        await axios.put(`https://api.digitalocean.com/v2/domains/${domainName}/records/${record.Id}`, recordUpdate, getApiRequestHeaders());
+        await axios.put(`https://api.digitalocean.com/v2/domains/${domainName}/records/${record.id}`, recordUpdate, getApiRequestHeaders());
         writeLogMessage('***********************************************************************************************************************************');
         writeLogMessage(`Updated IP from ${dnsIpAddress} to ${newIp}`)
         writeLogMessage('***********************************************************************************************************************************');
